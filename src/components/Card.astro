@@ -1,0 +1,9 @@
+---
+const res = await fetch("http://rickandmortyapi.com/api/character")
+const data = await res.json()
+console.log(data.results)
+---
+
+<header>
+  <h1>Name: {data.results.map((character) => <li>{character.name}</li>)}</h1>
+</header>
