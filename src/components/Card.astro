@@ -1,9 +1,12 @@
 ---
-const res = await fetch("http://rickandmortyapi.com/api/character")
-const data = await res.json()
-console.log(data.results)
+import data from "../data/data.json"
 ---
 
 <header>
-  <h1>Name: {data.results.map((character) => <li>{character.name}</li>)}</h1>
+  <ul>
+    {data.map((character) => 
+    <li>{character.name}</li>
+    <img src={character.image} alt="">
+    )}
+  </ul>
 </header>
