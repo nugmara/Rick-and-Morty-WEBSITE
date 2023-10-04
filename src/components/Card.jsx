@@ -1,4 +1,3 @@
-import React from "@astrojs/react"
 
 function Card() {
 
