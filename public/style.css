@@ -1,6 +1,6 @@
 .glow-on-hover {
     position: relative;
-    color: white;
+    color: black;
     font-size: 16px;
     width: 100px;
     height: 40px;
@@ -38,11 +38,11 @@
     transition: opacity .3s ease-in-out;
 }
 
-.glow-on-hover:active {
+.glow-on-hover:hover {
     color: white;
 }
 
-.glow-on-hover:active:after {
+.glow-on-hover:hover:after {
     background: transparent;
 }
 
@@ -50,7 +50,7 @@
     opacity: 1;
 }
 
-/* .glow-on-hover:after {
+.glow-on-hover:after {
     z-index: -1;
     content: '';
     width: 100%;
@@ -60,7 +60,7 @@
     width: 100%;
     height: 100%;
     background: white;
-} */
+}
 
 @keyframes glowing {
     0% { background-position: 0 0; }
