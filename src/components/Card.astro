@@ -1,15 +1,16 @@
 ---
-import data from "../data/data.json";
+import data from "../data/data.json"
+
 ---
 
 <header class="bg-zinc-900">
   <section
-    class="grid hidden gap-6 sm:grid-cols-1 lg:grid-cols-2 justify-center m-36 bg-zinc-900"
+    class="grid gap-6 sm:grid-cols-1 lg:grid-cols-2 justify-center m-36 bg-zinc-900"
   >
     {
       data.map((character) => (
         <div
-          class="flex items-stretch mt-8 mb-6 rounded-lg shadow md:max-w-xl border-gray-700 bg-zinc-800"
+          class="character flex items-stretch mt-8 mb-6 rounded-lg shadow md:max-w-xl border-gray-700 bg-zinc-800"
           data-tilt
           data-tilt-scale="1.1"
           data-tilt-glare
@@ -65,3 +66,9 @@ import data from "../data/data.json";
     }
   </section>
 </header>
+<hr>
+<footer class="bg-white h-72">
+  <div >
+    Deploy by
+  </div>
+</footer>
