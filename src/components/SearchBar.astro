@@ -3,12 +3,22 @@
 
 <script>
 document.getElementById("showSearchButton").addEventListener("click", () => {
-    let searchForm = document.getElementById("searchForm")
-    let buttonClick = document.getElementById("showSearchButton")
+    let searchForm = document.getElementById("searchForm") as HTMLElement
+    let buttonClick = document.getElementById("showSearchButton") as HTMLElement
     searchForm.classList.toggle("hidden")
+    buttonClick.classList.toggle("hidden");
+})
+document.addEventListener("click", (event) => {
+    let searchForm = document.getElementById("searchForm") as HTMLElement
+    let buttonClick = document.getElementById("showSearchButton") as HTMLElement
+
+    if (!searchForm.contains(event.target as Node) && !buttonClick.contains(event.target as Node)) {
+        searchForm.classList.add("hidden");
+
+        buttonClick.classList.remove("hidden")
+    }
 })
 </script>
-{
     <div class="flex flex-col items-center text-white text-2xl font-bold m-8">
         <p>
             Click to search for your favorite characters! 
@@ -27,5 +37,3 @@ document.getElementById("showSearchButton").addEventListener("click", () => {
             <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-lime-500 hover:bg-lime-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-lime-500 dark:hover:bg-lime-700 dark:focus:ring-blue-800">Search</button>
         </div>
       </form>
-
-}
