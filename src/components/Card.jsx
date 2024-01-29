@@ -34,27 +34,19 @@ function Card() {
     setCurrentPage(nextPage)
 }
   return (
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                {characters.map((character) => (
-                    <div key={character.id}>
-                        <td>{character.name}</td>
-                    </div>
-                ))}
-            </tbody>
-        </table>
+    <header className="bg-zing-900">
+        <section className="">
+        {characters.map((character) => (
+          <div key={character.id}>
+            <img src={character.image} alt="character-image" />
+
+          </div>
+        ))}
+        </section>
         {totalPages && currentPage < totalPages && (
         <button onClick={loadMoreCharacters}>Load More</button>
       )}
-    </div>
+    </header>
   )
 }
 

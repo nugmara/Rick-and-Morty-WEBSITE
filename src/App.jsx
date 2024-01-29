@@ -6,7 +6,6 @@ function App() {
 
   return (
     <>
-      <h1 className="text-8xl">Hi</h1>
       <Card />
     </>
   )
