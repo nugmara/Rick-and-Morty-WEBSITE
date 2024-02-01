@@ -101,7 +101,7 @@ function Card() {
       </section>
       {totalPages && currentPage < totalPages && (
         <button onClick={loadMoreCharacters}>
-          <img src="../../MortyAnimation.gif" alt="Morty-Animation" width="80px" className="mt-6"/>
+          <img src="../../MortyAnimation.gif" alt="Morty-Animation" width="80px" className="mt-2 p-4 mb-0 hover:border hover:rounded-md hover:bg-zinc-700"/>
         </button>
       )}
     </header>
