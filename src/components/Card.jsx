@@ -44,7 +44,7 @@ function Card() {
     setCurrentPage(nextPage);
   };
   return (
-    <header className="bg-zing-900">
+    <header className="bg-zinc-900">
       <section className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2 justify-center sm:mx-16 md:mx-36 bg-zinc-900">
         {Array.from(characters).map((character) => (
           <div
